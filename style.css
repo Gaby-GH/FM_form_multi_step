@@ -93,3 +93,84 @@ body{
     font-size: 14px;
     color: hsl(231, 11%, 63%);
 }
+
+#div_2_input{
+    display: flex;
+    flex-direction: column;
+    padding-right: 85px;
+    margin-top: 28px;
+}
+
+label{
+    color: hsl(213, 96%, 18%);
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.input_name{
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 5px;
+    height: 28px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+    font-size: 14px;
+    padding: 4px;
+    padding-left: 15px;
+    margin-bottom: 16px;
+}
+
+.input_name:focus{
+    outline: none;
+    border: 1.4px solid hsl(243, 100%, 62%);
+}
+
+.input_name::placeholder{
+    font-size: 14px;
+    color: hsl(231, 11%, 63%);
+}
+
+#div_2_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 85px;
+}
+
+#btn_next{
+    background-color: hsl(213, 96%, 18%);
+    color: hsl(217, 100%, 97%);
+    border: 0px;
+    border-radius: 6px;
+    height: 40px;
+    padding: 0px 18px;
+    font-size: 12px;
+}
+
+#btn_next:hover{
+    background-color: hsl(213, 94%, 25%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#color_test{
+    background-color: hsl(213, 96%, 18%);
+    color: hsl(243, 100%, 62%);
+    background: hsl(228, 100%, 84%);
+    border: 1px solid hsl(206, 94%, 87%);
+    background: hsl(354, 84%, 57%);
+    background-color: hsl(231, 11%, 63%);
+    background-color: hsl(229, 24%, 87%);
+    background-color: hsl(217, 100%, 97%);
+    background-color: hsl(231, 100%, 99%);
+}
