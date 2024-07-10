@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   
   <title>Frontend Mentor | Multi-step form</title>
 
@@ -25,7 +26,7 @@
       <div id="div_step">
 
         <div class="step">
-          <button class="btn_step_active">1</button>
+          <button id="btn_1" class="btn_step_active">1</button>
           <div class="div_step_p">
             <p class="p_step">STEP 1</p>
             <p class="p_info_step">YOUR INFOS</p>
@@ -33,7 +34,7 @@
         </div>
 
         <div class="step">
-          <button class="btn_step">2</button>
+          <button id="btn_2" class="btn_step">2</button>
           <div class="div_step_p">
             <p class="p_step">STEP 2</p>
             <p class="p_info_step">SELECT PLAN</p>
@@ -41,7 +42,7 @@
         </div>
 
         <div class="step">
-          <button class="btn_step">3</button>
+          <button id="btn_3" class="btn_step">3</button>
           <div class="div_step_p">
             <p class="p_step">STEP 3</p>
             <p class="p_info_step">ADD-ONS</p>
@@ -49,7 +50,7 @@
         </div>
 
         <div class="step">
-          <button class="btn_step">4</button>
+          <button id="btn_4" class="btn_step">4</button>
           <div class="div_step_p">
             <p class="p_step">STEP 4</p>
             <p class="p_info_step">SUMMARY</p>
@@ -70,14 +71,14 @@
 
       <div id="div_2_input">
 
-        <label for="input_name">Name</label>
-        <input type="text" name="input_name" class="input_name" placeholder="James Smith">
+        <div class="div_label"><label for="input_name">Name</label><p hidden class="p_required" id="p_red_name">This field is required</p></div>
+        <input type="text" name="input_name" id="input_name" class="input_name" placeholder="James Smith">
 
-        <label for="input_email">Email Address</label>
-        <input type="text" name="input_email" class="input_name" placeholder="JamesSmith@gmail.com">
+        <div class="div_label"><label for="input_email">Email Address</label><p hidden class="p_required" id="p_red_email">This field is required</p></div>
+        <input type="text" name="input_email" id="input_email" class="input_name" placeholder="JamesSmith@gmail.com">
 
-        <label for="input_number">Phone Number</label>
-        <input type="text" name="input_number" class="input_name" placeholder="e.g.+1 234 567 890">
+        <div class="div_label"><label for="input_number">Phone Number</label><p hidden class="p_required" id="p_red_phone">This field is required</p></div>
+        <input type="text" name="input_number" id="input_phone" class="input_name" placeholder="e.g.+1 234 567 890">
 
       </div>
 
