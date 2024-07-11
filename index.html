@@ -62,35 +62,80 @@
     </div>
 
     <div id="div_2">
-      
-
-      <div id="div_2_title">
-        <p id="p_personal_info">Personal info</p>
-        <p id="p_please">Please provide your name, email address, and phone number.</p>
+      <div id="div_page_2_title">
+        <p class="title_div_2">Select your plan</p>
+        <p class="p_title_div_2">You have the option of monthly or yearly billing.</p>
       </div>
 
-      <div id="div_2_input">
+      <div id="div_select_plan">
+        <div id="div_plan">
+          <div id="arcade" class="plan">
+            <img src="assets/images/icon-arcade.svg">
+            <p>Arcade</p>
+            <p>$9/mo</p>
+          </div>
 
-        <div class="div_label"><label for="input_name">Name</label><p hidden class="p_required" id="p_red_name">This field is required</p></div>
-        <input type="text" name="input_name" id="input_name" class="input_name" placeholder="James Smith">
+          <div id="arcade" class="plan">
+            <img src="assets/images/icon-advanced.svg">
+            <p>Advanced</p>
+            <p>$12/mo</p>
+          </div>
 
-        <div class="div_label"><label for="input_email">Email Address</label><p hidden class="p_required" id="p_red_email">This field is required</p></div>
-        <input type="text" name="input_email" id="input_email" class="input_name" placeholder="JamesSmith@gmail.com">
+          <div id="arcade" class="plan">
+            <img src="assets/images/icon-pro.svg">
+            <p>Pro</p>
+            <p>$15/mo</p>
+          </div>
+        </div>
 
-        <div class="div_label"><label for="input_number">Phone Number</label><p hidden class="p_required" id="p_red_phone">This field is required</p></div>
-        <input type="text" name="input_number" id="input_phone" class="input_name" placeholder="e.g.+1 234 567 890">
+        <div id="choice_monthly_yearly">
 
+        </div>
       </div>
-
-      <div id="div_2_btn">
-        <button id="btn_next">Next Step</button>
-      </div>
-
     </div>
 
   </div>
 
   
+
+
+
+
+
+
+<!-- TEMPLATES  -->
+
+  <template id="temp_1">
+    <div id="div_2_title">
+      <p id="p_personal_info" class="title_div_2">Personal info</p>
+      <p id="p_please" class="p_title_div_2">Please provide your name, email address, and phone number.</p>
+    </div>
+
+    <div id="div_2_input">
+
+      <div class="div_label"><label for="input_name">Name</label><p hidden class="p_required" id="p_red_name">This field is required</p></div>
+      <input type="text" name="input_name" id="input_name" class="input_name" placeholder="James Smith">
+
+      <div class="div_label"><label for="input_email">Email Address</label><p hidden class="p_required" id="p_red_email">This field is required</p></div>
+      <input type="text" name="input_email" id="input_email" class="input_name" placeholder="JamesSmith@gmail.com">
+
+      <div class="div_label"><label for="input_number">Phone Number</label><p hidden class="p_required" id="p_red_phone">This field is required</p></div>
+      <input type="text" name="input_number" id="input_phone" class="input_name" placeholder="e.g.+1 234 567 890">
+
+    </div>
+
+    <div id="div_2_btn">
+      <button id="btn_next">Next Step</button>
+    </div>
+  </template>
+
+  <template id="template_2">
+
+  </template>
+
+
+
+
   <!-- Sidebar start 
 
   Step 1

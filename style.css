@@ -82,15 +82,16 @@ body{
     width: 62%;
 }
 
-#p_personal_info{
+.title_div_2{
     color: hsl(213, 96%, 18%);
     font-weight: 700;
     font-size: 26px;
     margin-bottom: 0%;
 }
 
-#p_please{
+.p_title_div_2{
     font-size: 14px;
+    margin-top: 10px;
     color: hsl(231, 11%, 63%);
 }
 
@@ -168,7 +169,27 @@ label{
 
 /*2 eme pages*/
 
+#div_select_plan{
+    margin-top: 40px;
+}
 
+#div_plan{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+}
+
+.plan{
+    border: 0.03cm solid hsl(229, 24%, 87%);
+    border-radius: 6px;
+    width: 100px;
+    padding: 4px;
+}
+
+.plan:hover{
+    border: 0.03cm solid hsl(243, 100%, 62%);
+}
 
 
 

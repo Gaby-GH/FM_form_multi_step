@@ -1,6 +1,7 @@
 let div_2 = document.querySelector("#div_2")
 
-let btn_next = document.querySelector("#btn_next")
+let template_1 = document.querySelector("#temp_1")
+//div_2.innerHTML = template_1.innerHTML <------- A REMTTRE POUR QUE LE SCRIPT FONCTIONNE
 
 let input_name = document.querySelector("#input_name")
 let input_email = document.querySelector("#input_email")
@@ -9,6 +10,8 @@ let input_phone = document.querySelector("#input_phone")
 let p_red_name = document.querySelector("#p_red_name")
 let p_red_email = document.querySelector("#p_red_email")
 let p_red_phone = document.querySelector("#p_red_phone")
+
+let btn_next = document.querySelector("#btn_next")
 
 let page = 1
 
@@ -51,9 +54,15 @@ let btn_2 = document.querySelector("#btn_2")
 let btn_3 = document.querySelector("#btn_3")
 let btn_4 = document.querySelector("#btn_4")
 
+function UpdatePage1(){
+
+}
+
 function UpdatePage2(){
     btn_1.className = "btn_step"
     btn_2.className = "btn_step_active"
 
     div_2.innerHTML = ""
+
+
 }
