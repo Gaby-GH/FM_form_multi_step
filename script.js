@@ -1,7 +1,8 @@
 let div_2 = document.querySelector("#div_2")
 
 let template_1 = document.querySelector("#temp_1")
-//div_2.innerHTML = template_1.innerHTML <------- A REMTTRE POUR QUE LE SCRIPT FONCTIONNE
+let template_2 = document.querySelector("#temp_2")
+div_2.innerHTML = template_1.innerHTML //<------- A REMTTRE POUR QUE LE SCRIPT FONCTIONNE
 
 let input_name = document.querySelector("#input_name")
 let input_email = document.querySelector("#input_email")
@@ -62,7 +63,94 @@ function UpdatePage2(){
     btn_1.className = "btn_step"
     btn_2.className = "btn_step_active"
 
-    div_2.innerHTML = ""
+    div_2.innerHTML = template_2.innerHTML
 
+    let arcade = document.querySelector("#arcade")
+    let advanced = document.querySelector("#advanced")
+    let pro = document.querySelector("#pro")
 
+    let price1 = document.querySelector("#price1")
+    let price2 = document.querySelector("#price2")
+    let price3 = document.querySelector("#price3")
+    let p_mfree1 = document.querySelector("#p_mfree1")
+    let p_mfree2 = document.querySelector("#p_mfree2")
+    let p_mfree3 = document.querySelector("#p_mfree3")
+
+    let switch_my = document.querySelector("#switch")
+    let monthly = true
+    let yearly = false
+
+    let p_monthly = document.querySelector("#p_monthly")
+    let p_yearly = document.querySelector("#p_yearly")
+
+    arcade.addEventListener("click", () => {
+        arcade.style.backgroundColor = "hsl(217, 100%, 97%)"
+        arcade.style.border = "0.03cm solid hsl(243, 100%, 62%)"
+        advanced.style.backgroundColor = "white"
+        advanced.style.border = "0.03cm solid hsl(229, 24%, 87%)"
+        pro.style.backgroundColor = "white"
+        pro.style.border = "0.03cm solid hsl(229, 24%, 87%)"
+    })
+    
+    advanced.addEventListener("click", () => {
+        arcade.style.backgroundColor = "white"
+        arcade.style.border = "0.03cm solid hsl(229, 24%, 87%)"
+        advanced.style.backgroundColor = "hsl(217, 100%, 97%)"
+        advanced.style.border = "0.03cm solid hsl(243, 100%, 62%)"
+        pro.style.backgroundColor = "white"
+        pro.style.border = "0.03cm solid hsl(229, 24%, 87%)"
+    })
+    
+    pro.addEventListener("click", () => {
+        arcade.style.backgroundColor = "white"
+        arcade.style.border = "0.03cm solid hsl(229, 24%, 87%)"
+        advanced.style.backgroundColor = "white"
+        advanced.style.border = "0.03cm solid hsl(229, 24%, 87%)"
+        pro.style.backgroundColor = "hsl(217, 100%, 97%)"
+        pro.style.border = "0.03cm solid hsl(243, 100%, 62%)"
+    })
+    
+    let one = 0
+    switch_my.addEventListener("click", () => {
+        one += 1
+    
+        if (monthly == true && yearly == false && one == 1){
+            p_monthly.style.color = "hsl(231, 11%, 63%)"
+            p_yearly.style.color = "hsl(213, 96%, 18%)"
+    
+            price1.textContent = "$90/yr"
+            price2.textContent = "$120/yr"
+            price3.textContent = "$150/yr"
+            p_mfree1.textContent = "2 months free"
+            p_mfree2.textContent = "2 months free"
+            p_mfree3.textContent = "2 months free"
+    
+            yearly = true
+            monthly = false
+            one -= 2
+        }else if (monthly == false && yearly == true && one == 1){
+            p_monthly.style.color = "hsl(213, 96%, 18%)"
+            p_yearly.style.color = "hsl(231, 11%, 63%)"
+    
+            price1.textContent = "$9/mo"
+            price2.textContent = "$12/mo"
+            price3.textContent = "$15/mo"
+            p_mfree1.textContent = ""
+            p_mfree2.textContent = ""
+            p_mfree3.textContent = ""
+    
+            yearly = false
+            monthly = true
+            one -= 2
+        }
+    
+    })
 }
+
+
+// CONTINUER FAIRE LE BTN GO BACKKKK !!!!!!
+
+// BIEN REFLECHIER OU LE PLACER 
+// AVOIR UNE BONNE CONSCIENCE DE LA STRUCTURE !!!!!
+
+
