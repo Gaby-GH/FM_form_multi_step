@@ -192,6 +192,11 @@ label{
     padding: 8px 0px 8px 0px;
 }
 
+#arcade{
+    background-color: hsl(217, 100%, 97%);
+    border: 0.03cm solid hsl(243, 100%, 62%);
+}
+
 .plan:hover{
     border: 0.03cm solid hsl(243, 100%, 62%);
     cursor: pointer;
@@ -304,8 +309,10 @@ label{
 #sidebar_btn{
     width: 390px;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    margin-top: 14%;
+    position: absolute;
+    bottom: 5%;
 }
 
 #btn_back{
@@ -320,6 +327,72 @@ label{
 #btn_back:hover{
     color: hsl(213, 96%, 18%);
     cursor: pointer;
+}
+
+
+/* 3eme pages*/
+
+#div_choice_p3{
+    margin-top: 24px;
+}
+
+.choice_p3{
+    width: 390px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 7px;
+    margin-top: 14px;
+}
+
+.left_choice_p3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 14px;
+}
+
+.checkbox_blue{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid hsl(229, 24%, 87%);
+}
+
+.checkbox_blue:checked{
+    background-color: hsl(243, 100%, 62%);
+    background-position: center;
+    background-image: url("coche4.png");
+
+}
+
+.div_p_choice1_p3{
+    margin: 12px 0px 12px 14px;
+}
+
+.p_title_choice{
+    color: hsl(213, 96%, 18%);
+    margin: 0%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.p_desc_choice{
+    color: hsl(231, 11%, 63%);
+    margin: 0%;
+}
+
+.p_price_p3{
+    color: hsl(228, 100%, 84%);
+    margin-right: 14px;
 }
 
 
