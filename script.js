@@ -3,7 +3,28 @@ let div_2_templates = document.querySelector("#div_2_templates")
 let template_1 = document.querySelector("#temp_1")
 let template_2 = document.querySelector("#temp_2")
 let template_3 = document.querySelector("#temp_3")
-div_2_templates.innerHTML = template_3.innerHTML // REMTTRE ICI
+let template_4 = document.querySelector("#temp_4")
+div_2_templates.innerHTML = template_4.innerHTML // A CAHNGER POUR QUE CA FOONCTIONNE
+
+let data = {
+    personal_infos : {
+        first_name : "",
+        email: "",
+        phone: ""
+    },
+
+    plan: {
+        monthly: true,
+        yearly: false,
+        type: "arcade"
+    },
+
+    addons: {
+        online: false,
+        larger: false,
+        customizable: false
+    }
+}
 
 let btn_next = document.querySelector("#btn_next")
 let btn_back = document.querySelector("#btn_back")
@@ -17,6 +38,9 @@ btn_next.addEventListener("click", () => {
         CanPage1GoPage2()
     }else if (page == 2){
         UpdatePage3()
+        page += 1
+    }else if(page == 3){
+        UpdatePage4()
         page += 1
     }
 })
@@ -61,6 +85,10 @@ function CanPage1GoPage2(){
 
 
     if ((!input_name.value == "") && (input_email.value.includes("@", ".") && (input_phone.value.length >= 10 || (input_phone.value.includes("1") || input_phone.value.includes("2") || input_phone.value.includes("3") || input_phone.value.includes("4") || input_phone.value.includes("5") || input_phone.value.includes("6") || input_phone.value.includes("7") || input_phone.value.includes("8") || input_phone.value.includes("9") || input_phone.value.includes("0") )))){
+        data.personal_infos.first_name = input_name.value
+        data.personal_infos.email = input_email.value
+        data.personal_infos.phone = input_phone.value
+
         page += 1
         UpdatePage2()
     }
@@ -78,6 +106,7 @@ function UpdatePage1(){
 function UpdatePage2(){
     btn_1.className = "btn_step"
     btn_2.className = "btn_step_active"
+    btn_3.className = "btn_step"
 
     div_2_templates.innerHTML = template_2.innerHTML
     
@@ -90,7 +119,12 @@ function UpdatePage2(){
         }else if(page == 3){
             page = 2
             UpdatePage2()
+        }else if (page == 4){
+            page = 3
+            UpdatePage3()
         }
+
+        console.log("back")
     })
 
     let arcade = document.querySelector("#arcade")
@@ -118,6 +152,8 @@ function UpdatePage2(){
         advanced.style.border = "0.03cm solid hsl(229, 24%, 87%)"
         pro.style.backgroundColor = "white"
         pro.style.border = "0.03cm solid hsl(229, 24%, 87%)"
+
+        data.plan.type = "arcade"
     })
     
     advanced.addEventListener("click", () => {
@@ -127,6 +163,8 @@ function UpdatePage2(){
         advanced.style.border = "0.03cm solid hsl(243, 100%, 62%)"
         pro.style.backgroundColor = "white"
         pro.style.border = "0.03cm solid hsl(229, 24%, 87%)"
+
+        data.plan.type = "advanced"
     })
     
     pro.addEventListener("click", () => {
@@ -136,6 +174,8 @@ function UpdatePage2(){
         advanced.style.border = "0.03cm solid hsl(229, 24%, 87%)"
         pro.style.backgroundColor = "hsl(217, 100%, 97%)"
         pro.style.border = "0.03cm solid hsl(243, 100%, 62%)"
+
+        data.plan.type = "pro"
     })
     
     let one = 0
@@ -152,6 +192,9 @@ function UpdatePage2(){
             p_mfree1.textContent = "2 months free"
             p_mfree2.textContent = "2 months free"
             p_mfree3.textContent = "2 months free"
+
+            data.plan.monthly = false
+            data.plan.yearly = true
     
             yearly = true
             monthly = false
@@ -166,6 +209,9 @@ function UpdatePage2(){
             p_mfree1.textContent = ""
             p_mfree2.textContent = ""
             p_mfree3.textContent = ""
+
+            data.plan.monthly = true
+            data.plan.yearly = false
     
             yearly = false
             monthly = true
@@ -178,16 +224,62 @@ function UpdatePage2(){
 function UpdatePage3(){
     btn_2.className = "btn_step"
     btn_3.className = "btn_step_active"
+    btn_4.className = "btn_step"
 
-    div_2_templates.innerHTML = ""
+    div_2_templates.innerHTML = template_3.innerHTML
     console.log("page 3")
 
+    if (data.plan.yearly == true){
+        let p_price1_p3 = document.querySelector("#p_price1_p3")
+        let p_price2_p3 = document.querySelector("#p_price2_p3")
+        let p_price3_p3 = document.querySelector("#p_price3_p3")
+
+        p_price1_p3.textContent = "+$10/yr"
+        p_price2_p3.textContent = "+$20/yr"
+        p_price3_p3.textContent = "+$20/yr"
+    }
+
+
+    let choice1_p3 = document.querySelector("#choice1_p3")
+    let choice2_p3 = document.querySelector("#choice2_p3")
+    let choice3_p3 = document.querySelector("#choice3_p3")
+    let list_choice_p3 = [choice1_p3, choice2_p3, choice3_p3]
+
+    for (let g of list_choice_p3){
+
+        g.firstElementChild.firstElementChild.addEventListener("change", () => {
+            console.log("active")
+
+            if (g.className == "choice_p3"){
+                g.className = "choice_p3 choice_select"
+
+                if (g.id == "choice1_p3"){
+                    data.addons.online = true
+                }else if (g.id == "choice2_p3"){
+                    data.addons.larger = true
+                }else if (g.id == "choice3_p3"){
+                    data.addons.customizable = true
+                }
+
+            }else if (g.className == "choice_p3 choice_select"){
+                g.className = "choice_p3"
+
+                if (g.id == "choice1_p3"){
+                    data.addons.online = false
+                }else if (g.id == "choice2_p3"){
+                    data.addons.larger = false
+                }else if (g.id == "choice3_p3"){
+                    data.addons.customizable = false
+                }
+            }
+        })
+    }
 }
 
+function UpdatePage4(){
+    btn_3.className = "btn_step"
+    btn_4.className = "btn_step_active"
 
-// CONTINUER FAIRE LE BTN GO BACKKKK !!!!!!
-
-// BIEN REFLECHIER OU LE PLACER 
-// AVOIR UNE BONNE CONSCIENCE DE LA STRUCTURE !!!!!
-
+    div_2_templates.innerHTML = ""
+}
 

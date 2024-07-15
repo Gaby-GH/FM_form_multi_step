@@ -347,6 +347,11 @@ label{
     margin-top: 14px;
 }
 
+.choice_select{
+    background-color: hsl(217, 100%, 97%);
+    border: 1px solid hsl(213, 96%, 18%);
+}
+
 .left_choice_p3{
     display: flex;
     flex-direction: row;
@@ -374,7 +379,7 @@ label{
 }
 
 .div_p_choice1_p3{
-    margin: 12px 0px 12px 14px;
+    margin: 14px 0px 14px 14px;
 }
 
 .p_title_choice{
@@ -394,6 +399,59 @@ label{
     color: hsl(228, 100%, 84%);
     margin-right: 14px;
 }
+
+/* Page 4*/
+
+#div_4{
+    width: 390px;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 24px;
+    background-color: hsl(217, 100%, 97%);
+}
+
+#div_4_part_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 25px 0px 25px;
+    padding: 12px 0px 0px 0px;
+}
+
+#div_recap_type{
+    display: flex;
+    flex-direction: row;
+}
+
+#div_recap_type > p{
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+    font-size: 14px;
+    margin: 8px 0px 4px 0px;
+}
+
+#btn_p_change{
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px solid;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 0%;
+    margin: 0%;
+    color: hsl(231, 11%, 63%);
+}
+
+#btn_p_change:hover{
+    color: hsl(243, 100%, 62%);
+}
+
+#p_total_price{
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
 
 
 #zcolor_test{
