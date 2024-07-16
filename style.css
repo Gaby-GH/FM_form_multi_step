@@ -542,6 +542,97 @@ label{
 }
 
 
+@media screen and (max-width: 375px) {
+
+    #div_main{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        transform: none;
+        background-color: hsl(217, 100%, 97%);
+        flex-direction: column;
+    }
+
+    #div_1{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 200px;
+        border-radius: 0px;
+        background-size: cover;
+        background-position: bottom -100px right 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #div_step{
+        display: flex;
+        flex-direction: row;
+        position: static;
+        margin-top: 40px;
+    }
+
+    .step{
+        margin-right: 10px;
+    }
+
+    .btn_step{
+        height: 32px;
+        width: 32px;
+    }
+    
+    .btn_step_active{
+        height: 32px;
+        width: 32px;
+    }
+
+    .div_step_p{
+        display: none;
+    }
+
+    #div_2_templates{
+        background-color: white;
+        position: relative;
+        width: 80vw;
+        top: 110px;
+        left: 50%;
+        transform: translate(-30%, 0%);
+        border-radius: 10px;
+        padding: 1px 1px 1px 15px;
+        z-index: 30;
+    }
+    
+    .p_title_div_2{
+        width: 70vw;
+    }
+
+    #div_2_title{
+        white-space: normal;
+    }
+
+    #div_2_input{
+        padding-right: 15px;
+    }
+
+    #sidebar_btn{
+        background-color: white;
+        position: absolute;
+        height: 55px;
+        left: 0%;
+        bottom: 0%;
+        padding: 10px;
+        align-items: center;
+    }
+
+    #btn_next{
+        margin-right: 38px;
+        border-radius: 4px;
+    }
+}
 
 #zcolor_test{
     color: hsl(213, 96%, 18%)
