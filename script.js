@@ -4,7 +4,8 @@ let template_1 = document.querySelector("#temp_1")
 let template_2 = document.querySelector("#temp_2")
 let template_3 = document.querySelector("#temp_3")
 let template_4 = document.querySelector("#temp_4")
-div_2_templates.innerHTML = template_4.innerHTML // A CAHNGER POUR QUE CA FOONCTIONNE
+let template_5 = document.querySelector("#temp_5")
+div_2_templates.innerHTML = template_1.innerHTML 
 
 let data = {
     personal_infos : {
@@ -42,6 +43,9 @@ btn_next.addEventListener("click", () => {
     }else if(page == 3){
         UpdatePage4()
         page += 1
+    }else if (page == 4){
+        page += 1
+        UpdatePageFinal()
     }
 })
 
@@ -107,6 +111,7 @@ function UpdatePage2(){
     btn_1.className = "btn_step"
     btn_2.className = "btn_step_active"
     btn_3.className = "btn_step"
+    btn_4.className = "btn_step"
 
     div_2_templates.innerHTML = template_2.innerHTML
     
@@ -145,6 +150,10 @@ function UpdatePage2(){
     let p_monthly = document.querySelector("#p_monthly")
     let p_yearly = document.querySelector("#p_yearly")
 
+    data.plan.monthly = true
+    data.plan.yearly = false
+    data.plan.type = "arcade"
+    
     arcade.addEventListener("click", () => {
         arcade.style.backgroundColor = "hsl(217, 100%, 97%)"
         arcade.style.border = "0.03cm solid hsl(243, 100%, 62%)"
@@ -245,6 +254,10 @@ function UpdatePage3(){
     let choice3_p3 = document.querySelector("#choice3_p3")
     let list_choice_p3 = [choice1_p3, choice2_p3, choice3_p3]
 
+    data.addons.online = false
+    data.addons.customizable = false
+    data.addons.larger = false
+
     for (let g of list_choice_p3){
 
         g.firstElementChild.firstElementChild.addEventListener("change", () => {
@@ -280,6 +293,149 @@ function UpdatePage4(){
     btn_3.className = "btn_step"
     btn_4.className = "btn_step_active"
 
-    div_2_templates.innerHTML = ""
+    div_2_templates.innerHTML = template_4.innerHTML
+
+    let btn_change_plan = document.querySelector("#btn_p_change")
+    btn_change_plan.addEventListener("click", () => {
+        page = 2
+        UpdatePage2()
+    })
+
+    // Price final
+
+    let price_final = 0
+
+    // Yearly or Monthly
+
+    let contrat = ""
+    let p_contrat_info = document.querySelector("#p_contrat_info")
+    console.log(p_contrat_info.textContent, data.plan.yearly)
+    if (data.plan.monthly == true){
+        contrat = "m"
+        p_contrat_info.textContent = "(Monthly)"
+    }else if (data.plan.yearly == true){
+        contrat = "y"
+        p_contrat_info.textContent = "(Yearly)"
+    }
+
+    // part 1 infos
+
+    let plan_final = document.querySelector("#p_plan_final")
+    let p_price_plan = document.querySelector("#p_total_price")
+    if (data.plan.type == "arcade"){
+
+        plan_final.textContent = "Arcade"
+        price_final += 9
+        if (contrat == "m"){
+            p_price_plan.textContent = "+$9/mo"
+        }else{
+            p_price_plan.textContent = "+$90/yr"
+        }
+
+
+    }else if (data.plan.type == "advanced"){
+
+        plan_final.textContent = "Advanced"
+        price_final += 12
+        if (contrat == "m"){
+            p_price_plan.textContent = "+$12/mo"
+        }else{
+            p_price_plan.textContent = "+$120/yr"
+        }
+
+    }else if (data.plan.type == "pro"){
+
+        plan_final.textContent = "Pro"
+        price_final += 15
+        if (contrat == "m"){
+            p_price_plan.textContent = "+$15/mo"
+        }else{
+            p_price_plan.textContent = "+$150/yr"
+        }
+    }
+
+
+    // Addons hidden && addons contrat
+
+    let div_h1 = document.querySelector("#div_h1")
+    let p1h1 = document.querySelector("#p1_h1")
+    let p2h1 = document.querySelector("#p2_h1")
+
+    let div_h2 = document.querySelector("#div_h2")
+    let p1h2 = document.querySelector("#p1_h2")
+    let p2h2 = document.querySelector("#p2_h2")
+
+    let div_h3 = document.querySelector("#div_h3")
+    let p1h3 = document.querySelector("#p1_h3")
+    let p2h3 = document.querySelector("#p2_h3")
+
+    //contrat
+    if (contrat == "m"){
+        p2h1.textContent = "+$1/mo"
+        p2h2.textContent = "+$2/mo"
+        p2h3.textContent = "+$2/mo"
+    }else{
+        p2h1.textContent = "+$10/yr"
+        p2h2.textContent = "+$20/yr"
+        p2h3.textContent = "+$20/yr"
+    }
+
+    // hidden
+    if (data.addons.online == true){
+        price_final += 1
+        div_h1.removeAttribute("hidden")
+        p1h1.removeAttribute("hidden")
+        p2h1.removeAttribute("hidden")
+    }else if (data.addons.online == false){
+        div_h1.setAttribute("hidden", true)
+        p1h1.setAttribute("hidden", true)
+        p2h1.setAttribute("hidden", true)
+    }
+
+    if (data.addons.larger == true){
+        price_final += 2
+        div_h2.removeAttribute("hidden")
+        p1h2.removeAttribute("hidden")
+        p2h2.removeAttribute("hidden")
+    }else if (data.addons.larger == false){
+        div_h2.setAttribute("hidden", true)
+        p1h2.setAttribute("hidden", true)
+        p2h2.setAttribute("hidden", true)
+    }
+
+    if (data.addons.customizable == true){
+        price_final += 2
+        div_h3.removeAttribute("hidden")
+        p1h3.removeAttribute("hidden")
+        p2h3.removeAttribute("hidden")
+    }else if (data.addons.customizable == false){
+        div_h3.setAttribute("hidden", true)
+        p1h3.setAttribute("hidden", true)
+        p2h3.setAttribute("hidden", true)
+    }
+
+
+    // Price final
+
+    let p_total_per = document.querySelector("#p_total_per")
+    let p_price_final = document.querySelector("#p_price_final")
+
+    if (contrat == "m"){
+        p_total_per.textContent = "Total (per month)"
+        p_price_final.textContent = `+$${price_final}/mo`
+    }else if (contrat == "y") {
+        p_total_per.textContent = "Total (per year)"
+        p_price_final.textContent = `+$${price_final}0/yr`
+    }
+
+    // confirm
+
+    btn_next.textContent = "Confirm"
+    btn_next.id = "btn_confirm"
 }
 
+
+function UpdatePageFinal(){
+    let div_2 = document.querySelector("#div_2")
+    div_2.innerHTML = template_5.innerHTML
+}

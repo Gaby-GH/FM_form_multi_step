@@ -402,9 +402,13 @@ label{
 
 /* Page 4*/
 
+#p_finishing{
+    margin-top: 18px;
+}
+
 #div_4{
     width: 390px;
-    height: 150px;
+    height: auto;
     border-radius: 10px;
     margin-top: 24px;
     background-color: hsl(217, 100%, 97%);
@@ -415,8 +419,9 @@ label{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 25px 0px 25px;
-    padding: 12px 0px 0px 0px;
+    margin: 0px 25px 8px 25px;
+    padding: 12px 0px 20px 0px;
+    border-bottom: 1px solid hsl(229, 24%, 87%);
 }
 
 #div_recap_type{
@@ -449,7 +454,91 @@ label{
 
 #p_total_price{
     color: hsl(213, 96%, 18%);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.div_plan_recap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 25px 0px 25px;
+}
+
+.p_plan_recap{
+    font-size: 13px;
+    color: hsl(231, 11%, 63%);
+    margin: 10px;
+}
+
+.price_plan_recap{
+    font-size: 13px;
+    color: hsl(213, 96%, 18%);
     font-weight: 500;
+    margin: 10px;
+}
+
+#div_final{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 366px;
+    align-items: center;
+    margin: 8px 25px 0px 25px;
+}
+
+#p_price_final{
+    margin: 0%;
+    margin-right: 35px;
+    color: hsl(243, 100%, 62%);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/*confirm*/
+
+#btn_confirm{
+    color: hsl(217, 100%, 97%);
+    border: 0px;
+    border-radius: 7px;
+    height: 35px;
+    padding: 0px 22px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: hsl(243, 100%, 62%);
+}
+
+#btn_confirm:hover{
+    background-color: hsl(228, 100%, 84%);
+    cursor: pointer;
+}
+
+/*Page 5*/
+
+#div_5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+}
+
+#p_thank{
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    color: hsl(213, 96%, 18%);
+}
+
+#p_det{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: hsl(231, 11%, 63%);
+    width: 385px;
 }
 
 

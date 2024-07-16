@@ -72,12 +72,8 @@
         <button id="btn_back">Go Back</button>
       </div>
     </div>
-  
 
   </div>
-
-  
-
 
 
 <!-- TEMPLATES  -->
@@ -100,10 +96,6 @@
       <input type="text" name="input_number" id="input_phone" class="input_name" placeholder="e.g.+1 234 567 890">
 
     </div>
-
-    <!--<div id="div_2_btn">
-      <button id="btn_next">Next Step</button>
-    </div>-->
   </template>
 
   <template id="temp_2">
@@ -214,7 +206,7 @@
 
   <template id="temp_4">
     <div id="div_page_2_title">
-      <p class="title_div_2">Finishing up</p>
+      <p class="title_div_2" id="p_finishing">Finishing up</p>
       <p class="p_title_div_2">Double-check everything looks OK before confirming.</p>
     </div>
 
@@ -222,12 +214,47 @@
 
       <div id="div_4_part_1">
         <div id="div_p_part_1">
-          <div id="div_recap_type"><p>Arcade</p><p style="margin-left: 5px;">(Monthly)</p></div>
+          <div id="div_recap_type"><p id="p_plan_final">Arcade</p><p id="p_contrat_info" style="margin-left: 5px;"></p></div>
           <button id="btn_p_change">Change</button>
         </div>
         <p id="p_total_price">$9/mo</p>
       </div>
 
+      <div id="div_4_part_2">
+
+        <div class="div_plan_recap" id="div_h1">
+          <p class="p_plan_recap" id="p1_h1">Online servive</p>
+          <p class="price_plan_recap" id="p2_h1">+$1/mo</p>
+        </div>
+
+        <div class="div_plan_recap" id="div_h2">
+          <p class="p_plan_recap" id="p1_h2">Larger Storage</p>
+          <p class="price_plan_recap" id="p2_h2">+$2/mo</p>
+        </div>
+
+        <div class="div_plan_recap" id="div_h3">
+          <p class="p_plan_recap" id="p1_h3">Customizable profile</p>
+          <p class="price_plan_recap" id="p2_h3">+$2/mo</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="div_final">
+      <p class="p_plan_recap" id="p_total_per"></p>
+      <p id="p_price_final">+$12/mo</p>
+    </div>
+
+  </template>
+
+  <template id="temp_5">
+    <div id="div_5">
+       <img src="assets/images/icon-thank-you.svg" width="70px">
+       <p id="p_thank">Thank you!</p>
+       <p id="p_det">Thanks for confirming your subscription! We hope you have 
+        fun using our platform. If you ever need support, please feel 
+        free to email us at support@loremgaming.com.</p>
     </div>
   </template>
 
