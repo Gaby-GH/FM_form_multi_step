@@ -542,7 +542,7 @@ label{
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
 
     #div_main{
         position: absolute;
