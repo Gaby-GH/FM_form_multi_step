@@ -5,7 +5,7 @@ let template_2 = document.querySelector("#temp_2")
 let template_3 = document.querySelector("#temp_3")
 let template_4 = document.querySelector("#temp_4")
 let template_5 = document.querySelector("#temp_5")
-div_2_templates.innerHTML = template_1.innerHTML
+div_2_templates.innerHTML = template_5.innerHTML 
 
 let data = {
     personal_infos : {
@@ -437,9 +437,5 @@ function UpdatePage4(){
 
 function UpdatePageFinal(){
     let div_2 = document.querySelector("#div_2")
-    if (window.innerWidth > 374){
-        div_2.innerHTML = template_5.innerHTML
-    }else if (window.innerWidth <= 374){
-        div_2_templates.innerHTML = template_5.innerHTML
-    }
+    div_2.innerHTML = template_5.innerHTML
 }

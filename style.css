@@ -727,14 +727,20 @@ label{
     /*TEMPLATE FINAL*/
 
     #div_5{
-        position: static;
-        transform: none;
         width: 73vw;
-        margin-top: 70px;
-        margin-bottom: 70px;
+        background-color: white;
+        position: relative;
+        width: 80vw;
+        top: 110px;
+        left: 50%;
+        transform: translate(-30%, 0%);
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px hsl(229, 24%, 87%);
+        z-index: 30;
     }
 
     #img_final{
+        margin-top: 70px;
         width: 50px;
     }
 
@@ -745,5 +751,6 @@ label{
 
     #p_det{
         width: 70vw;
+        margin-bottom: 70px;
     }
 }
