@@ -603,11 +603,16 @@ label{
         transform: translate(-30%, 0%);
         border-radius: 10px;
         padding: 1px 1px 1px 15px;
+        box-shadow: 2px 2px 20px hsl(229, 24%, 87%);
         z-index: 30;
     }
     
+    .title_div_2{
+        width: 280px;
+    }
+
     .p_title_div_2{
-        width: 70vw;
+        width: 68vw;
     }
 
     #div_2_title{
@@ -632,19 +637,113 @@ label{
         margin-right: 38px;
         border-radius: 4px;
     }
-}
 
-#zcolor_test{
-    color: hsl(213, 96%, 18%)
-    hsl(243, 100%, 62%)
-    hsl(228, 100%, 84%)
-    hsl(206, 94%, 87%)
-    hsl(354, 84%, 57%)
-    
-    
-    hsl(231, 11%, 63%)
-    hsl(229, 24%, 87%)
-    hsl(217, 100%, 97%)
-    hsl(231, 100%, 99%)
-    ;
+    #btn_back{
+        margin-left: 8px;
+    }
+
+    /*TEMPLATE 2*/
+
+    #div_plan{
+        flex-direction: column;
+        align-items: center;
+        width: 76vw;
+    }
+
+    .plan{
+        width: 73vw;
+        height: 45px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+       }
+
+    .content_plan{
+        flex-direction: row;
+        align-items: center;
+        margin: 0px 0px 0px 12px;
+    }
+
+    .div_plan_p{
+        margin: 0%;
+        margin-left: 12px;
+    }
+
+    #choice_monthly_yearly{
+        width: 73vw;
+        
+        margin: 8px 0px 28px 6px;
+    }
+
+    /*TEMPLATE 3*/
+
+    #div_choice_p3{
+        margin-bottom: 28px;
+    }
+
+    .choice_p3{
+        width: 75vw;
+    }
+
+    /*TEMPLATE 4*/
+
+    #div_4{
+        width: 73vw;
+    }
+
+    #div_4_part_1{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .div_plan_recap{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #div_final{
+        width: 73vw;
+        margin: 0%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #p_price_final{
+        margin-right: 15px;
+    }
+
+    #btn_confirm{
+        color: hsl(217, 100%, 97%);
+        border: 0px;
+        height: 35px;
+        padding: 0px 22px;
+        font-size: 12px;
+        font-weight: 500;
+        background-color: hsl(243, 100%, 62%);
+        margin-right: 38px;
+        border-radius: 4px;
+    }
+
+    /*TEMPLATE FINAL*/
+
+    #div_5{
+        position: static;
+        transform: none;
+        width: 73vw;
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
+    #img_final{
+        width: 50px;
+    }
+
+    #p_thank{
+        font-size: 20px;
+        margin-top: 14px;
+    }
+
+    #p_det{
+        width: 70vw;
+    }
 }

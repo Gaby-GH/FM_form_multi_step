@@ -5,7 +5,7 @@ let template_2 = document.querySelector("#temp_2")
 let template_3 = document.querySelector("#temp_3")
 let template_4 = document.querySelector("#temp_4")
 let template_5 = document.querySelector("#temp_5")
-div_2_templates.innerHTML = template_1.innerHTML 
+div_2_templates.innerHTML = template_1.innerHTML
 
 let data = {
     personal_infos : {
@@ -29,7 +29,7 @@ let data = {
 
 let btn_next = document.querySelector("#btn_next")
 let btn_back = document.querySelector("#btn_back")
-btn_back.setAttribute("hidden", true)
+btn_back.setAttribute("hidden", true)           
 
 let page = 1
 
@@ -190,7 +190,7 @@ function UpdatePage2(){
     let one = 0
     switch_my.addEventListener("click", () => {
         one += 1
-    
+        
         if (monthly == true && yearly == false && one == 1){
             p_monthly.style.color = "hsl(231, 11%, 63%)"
             p_yearly.style.color = "hsl(213, 96%, 18%)"
@@ -437,5 +437,9 @@ function UpdatePage4(){
 
 function UpdatePageFinal(){
     let div_2 = document.querySelector("#div_2")
-    div_2.innerHTML = template_5.innerHTML
+    if (window.innerWidth > 374){
+        div_2.innerHTML = template_5.innerHTML
+    }else if (window.innerWidth <= 374){
+        div_2_templates.innerHTML = template_5.innerHTML
+    }
 }
